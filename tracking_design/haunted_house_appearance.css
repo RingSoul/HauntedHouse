@@ -1,0 +1,105 @@
+body
+{
+	background-color: #808080;
+}
+
+img
+{
+	width: 15%;
+}
+
+.img-left
+{
+	float: left;
+	padding: 11px;
+	clear: both;
+}
+
+.img-right
+{
+	float: right;
+	padding: 11px;
+	clear: both;
+}
+
+h1#header
+{
+	background-color: #6C6A6A;
+	font: bold 25pt Impact;
+	text-align: center;
+}
+
+span
+{
+	background-color: #D9E6ED;
+}
+
+div#story
+{
+	font: 19pt Comic Sans MS;
+}
+
+div#interaction, div#button-holder
+{
+	padding-top: 12px;
+	padding-bottom: 12px;
+	background-color: rgb(128, 128, 128);
+	font: 14pt Courier New;
+	clear: both;
+}
+
+button, a
+{
+	font: 14pt Georgia;
+	background-color: #FFFFFF;
+	color: #000000;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #000000;
+	border-radius: 19px;
+	display: block;
+	text-align: center;
+	width: 100%;
+	clear: both;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+button:hover, a:hover
+{
+	background-color: #6C6A6A;
+}
+
+hr
+{
+	clear: both;
+}
+
+button:disabled
+{
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+/* Secret message would be displayed upon hovering */
+.hover-text
+{
+	position: relative;
+}
+
+.hover-text::before
+{
+	content: attr(message);
+	visibility: hidden;
+	background-color: #FFFFFF;
+	color: #000000;
+	position: absolute;
+}
+
+.hover-text:hover::before
+{
+	visibility: visible;
+}

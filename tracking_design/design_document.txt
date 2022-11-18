@@ -1,0 +1,109 @@
+5 endings
+1) escape
+2) killed by chest monster ("chest touched" ending)
+3) killed by a feared one (dream merchant storyline)
+4) wrapped inside spider web (blood-curdling spiders storyline)
+5) rule the haunted house (hidden ending)
+
+
+details:
+- for ending#1
+	- if the door with ephemerals was passed through, TRUE HAPPY ENDING
+	- if not, FAKE HAPPY ENDING
+	- escape happens when the player touches the stove fire, or after answering the rabbit's question
+	- rabbit question: 
+- for ending#2, moral of the story is "curiosity kills a cat"
+- for ending#3, the player touched three or more than three potions from dream merchant
+- for ending#4, visitors who see the wrapped-up player will think it is a decoration, without seeing the red ants inside consuming the body
+- for ending#5, one has to unlock endings#1-4
+- if coffin is touched as the start of the game, ending#1 and #5 will turn into a random other one
+- touching the eternal fire will lock ending#5 for the current loop
+- cursing mummy can remove "curse" from ephemeral gate, so does eternal fire
+- a paper lies beside the harmless skeleton, with text "Nothing has happened, nothing is happening, and nothing will ever happen.  This was, is, and will forever be, a happy person; the same applies to the rest of the world."
+- key is used for the back half of the dream merchant's section
+- 1st encounter with red ant: consuming a pig while leaving its tail
+- 1st riddle from red ant: Does Remedios the Beauty view the world with lucidity or simplicity?
+	- Simplicity: possible ending#3 (chest room opened)
+	- lucidity: hallway opened
+	- touch name Remedios the Beauty --> directly ending #4
+- 2nd encounter with red ant: surrounding a jewelry that looks like a gold fish made of...gold? 
+- 2nd riddle from red ant: Three thousand inhabitants were slaughtered in a town, is the town a happy town?
+	- No: ending#4 directly
+	- Yes: emancipate all three wooden doors for entry
+
+
+11 locations:
+1) start page
+2) red ant nest
+3) devil kitchen
+4) chest room
+5) spider nest
+6) hallway
+7) burial chamber
+8) theater
+9) clock room
+10) dream merchant laboratory
+11) dream merchant laboratory back room (developer trivias)
+
+
+items / creatures:
+- pumpkin with a key hidden in it (start - devil's kitchen)
+- dream merchant (start - Blue Echo - clock room - 19:00 digital clock)
+- blood-curdling spiders (start - red ant nest - spider nest)
+- blue stove fire (start - devil's kitchen)
+- magician rabbit (start - Blue Echo - clock room - 9:30 clock)
+- blue eternal fire (start - devil's kitchen)
+- harmless skeleton (start - Blue Echo - clock room - antic clock)
+- cursing mummy (start - Blue Echo - clock room - antic clock)
+- chest monster (start - red ant nest - "Fourth Room")
+- red ants (start - red ant nest)
+
+
+JS functions:
+- initialize() --> used for the body tag onload attribute
+- display() --> update the front end with backend variables
+
+
+
+
+JS files that stores text to be used on different pages.  (Below is the general structure)
+/*
+HEADERS
+STORIES (same number as HEADERS)
+INTERACTION_INTRO
+INTERACTIONS_WITH_IMAGES // (lock self upon being clicked)
+- imageName (checked to see if match with this.alt's part)
+- lockSelfAfterClicked (boolean)
+- storyAddition (String)
+- interactionAddition (String)
+- buttonAddition (String, each button separated by |)
+- portal (.html as an anchor tag) (when a portal is available, lock all other clickable items)
+- refreshUponReEntry (when the location is visited more than once, this boolean literal determines if the image's onclick is disabled (false) or not (true))
+RESPONSES_TO_BUTTONS // include all possible button (even hidden ones) (lock self upon being clicked)
+- buttonContent (when a button is clicked, its innerHTML will be used to check if it matches any decision element in this array)
+- lockSelfAfterClicked (boolean)
+- storyAddition (String)
+- interactionAddition (String)
+- buttonAddition (String, each button separated by |)
+- portal (.html as an anchor tag) (when a portal is available, lock all other clickable items)
+- refreshUponReEntry (when the location is visited more than once, this boolean literal determines if the button is disabled (false) or not (true))
+IMAGES
+- imgSrc
+- imgClass
+- imgAlt (should match the imageName in INTERACTIONS_WITH_IMAGES)
+- entryNumToDisplay (string) (0 if display all the way through, #~ if display all the way through after a specific entry) (else, every number separated by |)
+INITIAL_BUTTONS // only for the ones that are visible immediately at first encounter 
+(i.e. not hidden ones) (different buttons separated by |)
+*/
+
+
+
+one JS file that stores all variables for game status (localStorage).
+
+
+reactToButton
+reactToImage
+
+
+
+
