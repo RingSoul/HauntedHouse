@@ -12,4 +12,4 @@ The game additionally contains references to the content of many book I have rea
 * Everything I Never Told You by Celeste Ng
 * etc.
 
-**Acknowledgements**: This project's originality is solely involved in the structuring of the Haunted House and the text descriptions.  Images come from the Internet (attributions included in the JS files of the "page_data" folder); the references to the content of different books, although self-interpreted or partially modified, is not a part of originality (attributions to the books are above).
+**Acknowledgements**: This project's originality is solely involved in the structuring of the Haunted House and the text descriptions.  Images come from the Internet (attributions included in the JS files of the "page_data" folder); the references to the content of different books, although self-interpreted or partially modified, are not parts of originality (attributions to the books are above).
